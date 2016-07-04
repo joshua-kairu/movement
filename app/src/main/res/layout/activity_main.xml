@@ -111,9 +111,9 @@
 
             android:layout_marginRight="@dimen/layout_margin_end"
 
-            android:text="Multiple Incoherent Elements"
+            android:text="Multiple Chaotic Elements"
 
-            android:onClick="multipleIncoherenceClick"
+            android:onClick="multipleChaoticClick"
 
             />
 

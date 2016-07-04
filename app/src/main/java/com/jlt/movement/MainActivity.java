@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
     // method multipleCoherenceClick
     public void multipleCoherenceClick( View view ) { startActivity( new Intent( this, MultipleCoherentElements.class ) ); }
 
-    // method multipleIncoherenceClick
-    public void multipleIncoherenceClick( View view ) { startActivity( new Intent( this, MultipleChaoticElements.class ) ); }
+    // method multipleChaoticClick
+    public void multipleChaoticClick( View view ) { startActivity( new Intent( this, MultipleChaoticElements.class ) ); }
 
     // begin method curvedMotionClick
     public void curvedMotionClick( View view ) {
