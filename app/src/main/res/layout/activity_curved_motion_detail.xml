@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+ Movement
+
+ Simple app to show proper moving of items in Android
+ 
+ Copyright (C) 2016 Kairu Joshua Wambugu
+ 
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ 
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see http://www.gnu.org/licenses/.
+
+ -->
+
+<!-- The curve motion layout showing details -->
+
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    tools:context="com.jlt.movement.CurveMotionDetail"
+
+    >
+
+    <!-- LinearLayout to hold the rest -->
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+
+        >
+
+        <!-- FrameLayout to hold the avatar -->
+
+        <FrameLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="256dp"
+
+            android:background="#ccc"
+
+            android:elevation="2dp"
+
+            >
+
+            <!-- The avatar -->
+
+            <View
+
+                android:id="@+id/acmd_v_avatar"
+
+                android:layout_width="112dp"
+
+                android:layout_height="112dp"
+
+                android:layout_gravity="center"
+
+                android:background="@drawable/avatar"
+
+                android:elevation="3dp"
+
+                android:transitionName="@string/transition_avatar"
+
+                />
+
+        </FrameLayout>
+
+        <!-- Some support text -->
+
+        <View
+
+            android:layout_width="match_parent"
+
+            android:layout_height="32dp"
+
+            android:layout_marginTop="24dp"
+
+            android:layout_marginStart="@dimen/layout_padding"
+
+            android:layout_marginEnd="80dp"
+
+            android:background="#bbb"
+
+            />
+
+        <View
+
+            android:layout_width="match_parent"
+
+            android:layout_height="16dp"
+
+            android:layout_marginTop="24dp"
+
+            android:layout_marginStart="@dimen/layout_padding"
+
+            android:layout_marginEnd="90dp"
+
+            android:background="#ccc"
+
+            />
+
+        <View
+
+            android:layout_width="match_parent"
+
+            android:layout_height="16dp"
+
+            android:layout_marginTop="24dp"
+
+            android:layout_marginStart="@dimen/layout_padding"
+
+            android:layout_marginEnd="60dp"
+
+            android:background="#ccc"
+
+            />
+
+        <View
+
+            android:layout_width="match_parent"
+
+            android:layout_height="16dp"
+
+            android:layout_marginTop="24dp"
+
+            android:layout_marginStart="@dimen/layout_padding"
+
+            android:layout_marginEnd="120dp"
+
+            android:background="#ccc"
+
+            />
+
+        <View
+
+            android:layout_width="match_parent"
+
+            android:layout_height="16dp"
+
+            android:layout_marginTop="24dp"
+
+            android:layout_marginStart="@dimen/layout_padding"
+
+            android:layout_marginEnd="88dp"
+
+            android:background="#ccc"
+
+            />
+
+        <View
+
+            android:layout_width="match_parent"
+
+            android:layout_height="16dp"
+
+            android:layout_marginTop="24dp"
+
+            android:layout_marginStart="@dimen/layout_padding"
+
+            android:layout_marginEnd="240dp"
+
+            android:background="#ccc"
+
+            />
+
+        <View
+
+            android:layout_width="match_parent"
+
+            android:layout_height="16dp"
+
+            android:layout_marginTop="24dp"
+
+            android:layout_marginStart="@dimen/layout_padding"
+
+            android:layout_marginEnd="32dp"
+
+            android:background="#ccc"
+
+            />
+
+        <View
+
+            android:layout_width="match_parent"
+
+            android:layout_height="16dp"
+
+            android:layout_marginTop="24dp"
+
+            android:layout_marginStart="@dimen/layout_padding"
+
+            android:layout_marginEnd="48dp"
+
+            android:background="#ccc"
+
+            />
+
+        <View
+
+            android:layout_width="match_parent"
+
+            android:layout_height="16dp"
+
+            android:layout_marginTop="24dp"
+
+            android:layout_marginStart="@dimen/layout_padding"
+
+            android:layout_marginEnd="48dp"
+
+            android:background="#ccc"
+
+            />
+
+    </LinearLayout>
+
+
+</ScrollView>

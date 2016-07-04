@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+ Movement
+
+ Simple app to show proper moving of items in Android
+ 
+ Copyright (C) 2016 Kairu Joshua Wambugu
+ 
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ 
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see http://www.gnu.org/licenses/.
+
+ -->
+
+<!-- The main layout -->
+
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity"
+
+    >
+
+    <!-- Holder LinearLayout -->
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+
+        android:paddingTop="@dimen/space_between_content_areas"
+
+        android:paddingBottom="@dimen/space_between_content_areas"
+
+        >
+
+        <!-- Button for multiple coherent elements -->
+
+        <Button
+
+            android:id="@+id/am_b_multiple_coherence"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:minHeight="?actionBarSize"
+
+            android:layout_marginStart="@dimen/layout_margin_start"
+
+            android:layout_marginTop="@dimen/space_between_content_areas"
+
+            android:layout_marginEnd="@dimen/layout_margin_end"
+
+            android:layout_marginBottom="@dimen/space_between_content_areas"
+
+            android:text="Multiple Coherent Elements"
+
+            android:onClick="multipleCoherenceClick"
+
+            />
+
+        <!-- Button for multiple incoherent elements -->
+
+        <Button
+
+            android:id="@+id/am_b_multiple_incoherence"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:minHeight="?actionBarSize"
+
+            android:layout_marginStart="@dimen/layout_margin_start"
+
+            android:layout_marginTop="@dimen/space_between_content_areas"
+
+            android:layout_marginEnd="@dimen/layout_margin_end"
+
+            android:layout_marginBottom="@dimen/space_between_content_areas"
+
+            android:text="Multiple Incoherent Elements"
+
+            android:onClick="multipleIncoherenceClick"
+
+            />
+
+        <!-- Button for curved motion -->
+
+        <Button
+
+            android:id="@+id/am_b_curved_motion"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:minHeight="?actionBarSize"
+
+            android:layout_marginStart="@dimen/layout_margin_start"
+
+            android:layout_marginTop="@dimen/space_between_content_areas"
+
+            android:layout_marginEnd="@dimen/layout_margin_end"
+
+            android:layout_marginBottom="@dimen/space_between_content_areas"
+
+            android:text="Curved Motion"
+
+            android:onClick="curvedMotionClick"
+
+            />
+
+        <!-- Button for doing size change -->
+
+        <Button
+
+            android:id="@+id/am_b_size_change"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:minHeight="?actionBarSize"
+
+            android:layout_marginStart="@dimen/layout_margin_start"
+
+            android:layout_marginTop="@dimen/space_between_content_areas"
+
+            android:layout_marginEnd="@dimen/layout_margin_end"
+
+            android:layout_marginBottom="@dimen/space_between_content_areas"
+
+            android:text="Size Change"
+
+            android:onClick="sizeChangeClick"
+
+            />
+
+    </LinearLayout>
+
+</ScrollView>

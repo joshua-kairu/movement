@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+ Movement
+
+ Simple app to show proper moving of items in Android
+
+ Copyright (C) 2016 Kairu Joshua Wambugu
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see http://www.gnu.org/licenses/.
+
+-->
+
+<!-- The message -->
+
+<!--
+
+android:transitionGroup - whether or not this ViewGroup should be treated as a single entity when doing a transition
+
+-->
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+
+    android:paddingTop="@dimen/space_between_content_areas"
+
+    android:paddingBottom="@dimen/space_between_content_areas"
+
+    android:paddingEnd="@dimen/layout_padding"
+
+    android:paddingRight="@dimen/layout_padding"
+
+    android:orientation="horizontal"
+
+    android:background="?android:selectableItemBackground"
+
+    android:transitionGroup="false"
+
+    >
+
+    <View
+
+        android:id="@+id/m_avatar"
+
+        android:layout_width = "56dp"
+
+        android:layout_height = "56dp"
+
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentLeft="true"
+
+        android:layout_marginStart="@dimen/layout_margin_start"
+
+        android:layout_marginLeft="@dimen/layout_margin_start"
+
+        android:layout_marginEnd="@dimen/layout_margin_end"
+
+        android:layout_marginRight="@dimen/layout_margin_end"
+
+        android:background="@drawable/avatar"
+
+        android:transitionName="@string/transition_avatar"
+
+        />
+
+    <!-- Some skeleton approximating text -->
+
+    <View
+
+        android:id="@+id/m_title"
+
+        android:layout_width="0dp"
+
+        android:layout_height="16dp"
+
+        android:layout_toEndOf="@id/m_avatar"
+
+        android:layout_toRightOf="@id/m_avatar"
+
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignParentRight="true"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:background="#bbb"
+
+        />
+
+    <View
+
+        android:id="@+id/m_subtitle"
+
+        android:layout_width = "0dp"
+
+        android:layout_height = "16dp"
+
+        android:layout_toEndOf="@id/m_avatar"
+
+        android:layout_toRightOf="@id/m_avatar"
+
+        android:layout_below="@id/m_title"
+
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignParentRight="true"
+
+        android:background="#ccc"
+
+        />
+
+</RelativeLayout>
