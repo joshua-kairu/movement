@@ -3,7 +3,6 @@ package com.jlt.movement;
 import android.os.Bundle;
 import android.support.v4.view.animation.LinearOutSlowInInterpolator;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Interpolator;
@@ -124,13 +123,9 @@ public class MultipleCoherentElements extends AppCompatActivity {
 
             currentView.setTranslationY( yOffset );
 
-            Log.e( getClass().getSimpleName(), "animateViewsIn for loop: currentView translationY is " + yOffset  );
-
             // 1c. make it 85% opaque
 
             currentView.setAlpha( 0.85F );
-
-            Log.e( getClass().getSimpleName(), "animateViewsIn for loop: currentView alpha 0.85 "  );
 
             // 1d. animate
 
@@ -157,8 +152,6 @@ public class MultipleCoherentElements extends AppCompatActivity {
             // 1d5. now
 
                     .start();
-
-            Log.e( getClass().getSimpleName(), "animateViewsIn for loop: currentView translationY is told to animate" );
 
             // 1e. make the next child have that 1.5 times relative top difference
 
