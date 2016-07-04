@@ -1,8 +1,9 @@
 package com.jlt.movement;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 /**
@@ -27,7 +28,7 @@ import android.view.View;
  */
 
 // begin activity MainActivity
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     /** CONSTANTS */
 
@@ -66,8 +67,21 @@ public class MainActivity extends Activity {
     // method multipleIncoherenceClick
     public void multipleIncoherenceClick( View view ) { startActivity( new Intent( this, MultipleChaoticElements.class ) ); }
 
-    // method curvedMotionClick
-    public void curvedMotionClick( View view ) { startActivity( new Intent( this, CurveMotionList.class ) ); }
+    // begin method curvedMotionClick
+    public void curvedMotionClick( View view ) {
+
+        // 0. start the curved motion list only if at least L is running
+        // 1. otherwise tell the user of the limitation
+
+        // 0. start the curved motion list only if at least L is running
+
+        if ( Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP ) { startActivity( new Intent( this, CurveMotionList.class ) ); }
+
+        // 1. otherwise tell the user of the limitation
+
+        else { new OldVersionDialogFragment().show( getSupportFragmentManager(), "" ); }
+
+    } // end method curvedMotionClick
 
     // method sizeChangeClick
     public void sizeChangeClick( View view ) { startActivity( new Intent( this, SizeChange.class ) ); }

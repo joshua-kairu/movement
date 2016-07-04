@@ -29,4 +29,10 @@
 
     <string name="transition_avatar">avatar</string>
 
+    <string name="dialog_message_error_old_version">Sorry, this option needs at least Android Lollipop. :-(</string>
+    <string name="dialog_message_negative">OK</string>
+
+    <string name="button_bad">The Bad</string>
+    <string name="button_good">The Good</string>
+
 </resources>

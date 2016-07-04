@@ -25,7 +25,7 @@
 
 <!-- The size change activity -->
 
-<FrameLayout
+<RelativeLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
 
@@ -36,8 +36,6 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
-
-    android:onClick="changeSize"
 
     tools:appearsIn=".SizeChange"
 
@@ -59,6 +57,66 @@
 
         app:cardElevation="2dp"
 
+        android:layout_centerInParent="true"
+
         />
 
-</FrameLayout>
+    <!-- LinearLayout to hold the buttons for changing size -->
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+
+        android:layout_alignParentBottom="true"
+
+        style="?android:attr/buttonBarButtonStyle"
+
+        >
+
+        <!-- Button for the bad style of size change -->
+
+        <Button
+
+            android:id="@+id/asc_b_bad"
+
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+
+            android:text="@string/button_bad"
+
+            android:onClick="badButtonClick"
+
+            style="?android:attr/buttonBarButtonStyle"
+
+            />
+
+        <!-- Button for the good style of size change -->
+
+        <Button
+
+            android:id="@+id/asc_b_good"
+
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+
+            android:text="@string/button_good"
+
+            android:onClick="goodButtonClick"
+
+            style="?android:attr/buttonBarButtonStyle"
+
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

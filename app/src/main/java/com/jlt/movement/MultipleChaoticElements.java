@@ -1,10 +1,10 @@
 package com.jlt.movement;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.view.animation.LinearOutSlowInInterpolator;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
 
 import java.util.Random;
@@ -31,7 +31,7 @@ import java.util.Random;
  */
 
 // begin activity MultipleChaoticElements
-public class MultipleChaoticElements extends Activity {
+public class MultipleChaoticElements extends AppCompatActivity {
 
     /** CONSTANTS */
 
@@ -110,7 +110,7 @@ public class MultipleChaoticElements extends Activity {
 
         // 0c. a linear out slow in interpolator
 
-        Interpolator lOSIInterpolator = AnimationUtils.loadInterpolator( this, android.R.interpolator.linear_out_slow_in );
+        Interpolator lOSIInterpolator = new LinearOutSlowInInterpolator();
 
         // 0d. the maximum width offset of the screen
 

@@ -73,7 +73,7 @@
 
             android:name=".CurveMotionDetail"
 
-            android:label="CurveMotionDetail"
+            android:label="Curve Motion Detail"
 
             />
 
@@ -83,7 +83,7 @@
 
             android:name=".CurveMotionList"
 
-            android:label="CurveMotionList"
+            android:label="Curve Motion List"
 
             />
 
@@ -93,7 +93,7 @@
 
             android:name=".MultipleChaoticElements"
 
-            android:label="MultipleChaoticElements"
+            android:label="Multiple Chaotic Elements"
 
             />
 
@@ -103,7 +103,7 @@
 
             android:name=".MultipleCoherentElements"
 
-            android:label="MultipleCoherentElements"
+            android:label="Multiple Coherent Elements"
 
             />
 
@@ -113,7 +113,7 @@
 
             android:name=".SizeChange"
 
-            android:label="SizeChange"
+            android:label="Size Change"
 
             />
 

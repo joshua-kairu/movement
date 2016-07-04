@@ -1,11 +1,11 @@
 package com.jlt.movement;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.view.animation.LinearOutSlowInInterpolator;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
 
 /**
@@ -30,7 +30,7 @@ import android.view.animation.Interpolator;
  */
 
 // begin activity MultipleCoherentElements
-public class MultipleCoherentElements extends Activity {
+public class MultipleCoherentElements extends AppCompatActivity {
 
     /** CONSTANTS */
 
@@ -107,7 +107,7 @@ public class MultipleCoherentElements extends Activity {
 
         // 0d. a linear out slow in interpolator
 
-        Interpolator lOSIInterpolator = AnimationUtils.loadInterpolator( this, android.R.interpolator.linear_out_slow_in );
+        Interpolator lOSIInterpolator = new LinearOutSlowInInterpolator();
 
         // 1. for each child
 

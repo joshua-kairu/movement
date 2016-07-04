@@ -25,7 +25,7 @@
 
 <!-- The main layout -->
 
-<ScrollView
+<RelativeLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
 
@@ -45,13 +45,15 @@
 
         android:layout_width="match_parent"
 
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
 
         android:orientation="vertical"
 
         android:paddingTop="@dimen/space_between_content_areas"
 
         android:paddingBottom="@dimen/space_between_content_areas"
+
+        android:layout_centerInParent="true"
 
         >
 
@@ -69,9 +71,13 @@
 
             android:layout_marginStart="@dimen/layout_margin_start"
 
+            android:layout_marginLeft="@dimen/layout_margin_start"
+
             android:layout_marginTop="@dimen/space_between_content_areas"
 
             android:layout_marginEnd="@dimen/layout_margin_end"
+
+            android:layout_marginRight="@dimen/layout_margin_end"
 
             android:layout_marginBottom="@dimen/space_between_content_areas"
 
@@ -101,6 +107,10 @@
 
             android:layout_marginBottom="@dimen/space_between_content_areas"
 
+            android:layout_marginLeft="@dimen/layout_margin_start"
+
+            android:layout_marginRight="@dimen/layout_margin_end"
+
             android:text="Multiple Incoherent Elements"
 
             android:onClick="multipleIncoherenceClick"
@@ -126,6 +136,10 @@
             android:layout_marginEnd="@dimen/layout_margin_end"
 
             android:layout_marginBottom="@dimen/space_between_content_areas"
+
+            android:layout_marginLeft="@dimen/layout_margin_start"
+
+            android:layout_marginRight="@dimen/layout_margin_end"
 
             android:text="Curved Motion"
 
@@ -153,6 +167,10 @@
 
             android:layout_marginBottom="@dimen/space_between_content_areas"
 
+            android:layout_marginLeft="@dimen/layout_margin_start"
+
+            android:layout_marginRight="@dimen/layout_margin_end"
+
             android:text="Size Change"
 
             android:onClick="sizeChangeClick"
@@ -161,4 +179,4 @@
 
     </LinearLayout>
 
-</ScrollView>
+</RelativeLayout>

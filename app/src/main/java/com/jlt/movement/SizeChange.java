@@ -1,11 +1,11 @@
 package com.jlt.movement;
 
 import android.animation.ObjectAnimator;
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.view.animation.LinearOutSlowInInterpolator;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
-import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
 
 import butterknife.Bind;
@@ -33,7 +33,7 @@ import butterknife.ButterKnife;
  */
 
 // begin activity SizeChange
-public class SizeChange extends Activity {
+public class SizeChange extends AppCompatActivity {
 
     /** CONSTANTS */
 
@@ -52,8 +52,8 @@ public class SizeChange extends Activity {
 
     private boolean
 
-    symmetric = true,
-    small = true;
+    animateSidesSymmetrically = true, // boolean to tell if we are to animate length and width together
+    cardSmall = true; // boolean to tell if the card is small or not
 
     /** METHODS */
 
@@ -90,38 +90,38 @@ public class SizeChange extends Activity {
      */
 
     // begin method changeSize
-    public void changeSize( View view ) {
+    public void changeSize( boolean animateSidesSimultaneously ) {
 
         // 0. get a fast out slow in interpolator
         // 1. create an object animator scaling the card horizontally
         // 2. use the above interpolator for the job
-        // 3. choose an animation duration depending on the symmetry of the card
+        // 3. choose an animation duration depending on the simultaneity(;-)) of the animation
         // 4. create an object animator scaling the card vertically
         // 5. use the above interpolator for the job
         // 6. animation should last 0.6 seconds
         // 7. start the scaling animations
-        // 8. toggle the states so that we switch between large/small a/symmetric
+        // 8. toggle the states so that we switch between large/small 
 
         // 0. get a fast out slow in interpolator
 
-        Interpolator interpolator = AnimationUtils.loadInterpolator( this, android.R.interpolator.fast_out_linear_in );
+        Interpolator interpolator = new LinearOutSlowInInterpolator();
 
         // 1. create an object animator scaling the card horizontally
 
         // the single value at the end means we animate to that value
-        ObjectAnimator scaleXAnimator = ObjectAnimator.ofFloat( cardView, View.SCALE_X, ( small == true ) ? LARGE_SCALE : 1f );
+        ObjectAnimator scaleXAnimator = ObjectAnimator.ofFloat( cardView, View.SCALE_X, ( cardSmall == true ) ? LARGE_SCALE : 1f );
 
         // 2. use the above interpolator for the job
 
         scaleXAnimator.setInterpolator( interpolator );
 
-        // 3. choose an animation duration depending on the symmetry of the card
+        // 3. choose an animation duration depending on the simultaneity(;-)) of the animation
 
-        scaleXAnimator.setDuration( ( symmetric == true ) ? 600L : 200L );
+        scaleXAnimator.setDuration( ( animateSidesSimultaneously == true ) ? 600L : 200L );
 
         // 4. create an object animator scaling the card vertically
 
-        ObjectAnimator scaleYAnimator = ObjectAnimator.ofFloat( cardView, View.SCALE_Y, ( small == true ) ? LARGE_SCALE : 1f );
+        ObjectAnimator scaleYAnimator = ObjectAnimator.ofFloat( cardView, View.SCALE_Y, ( cardSmall == true ) ? LARGE_SCALE : 1f );
 
         // 5. use the above interpolator for the job
 
@@ -137,12 +137,38 @@ public class SizeChange extends Activity {
 
         scaleYAnimator.start();
 
-        // 8. toggle the states so that we switch between large/small a/symmetric
+        // 8. toggle the states so that we switch between large/small 
 
-        small = !small;
-
-        if ( small == true ) { symmetric = !symmetric; }
+        cardSmall = ! cardSmall;
 
     } // end method changeSize
+
+    // begin method badButtonClick
+    public void badButtonClick( View view ) {
+
+        // a bad size change makes a view look like it's being zoomed in
+        // as in, the size change affects view length and width simultaneously
+
+        // 0. animate both of the card's size simultaneously
+
+        // 0. animate both of the card's size simultaneously
+
+        changeSize( true );
+
+    } // end method badButtonClick
+
+    // begin method goodButtonClick
+    public void goodButtonClick( View view ) {
+
+        // a good size change affects view length and width differently
+        // but ends up with the desired end size
+
+        // 0. animate both of the card's size not simultaneously
+
+        // 0. animate both of the card's size not simultaneously
+
+        changeSize( false );
+
+    } // end method goodButtonClick
 
 } // end activity SizeChange
